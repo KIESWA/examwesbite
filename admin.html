@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin – Greenfield Local Hub</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div class="header">
+    <h1>Greenfield Local Hub - Admin</h1>
+</div>
+
+<nav id="admin-nav">
+    <a href="home.html">Home</a>
+    <a href="produce.html">Produce</a>
+    <a href="producers.html">Producers</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">✖</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <p>Total: <span id="sidebar-total">0.00</span></p>
+    </div>
+</div>
+
+<h3 class="info-text">Admin Dashboard</h3>
+<p class="info-text">Manage stock, orders, and producer details.</p>
+
+<div class="container">
+    <div class="boxes">
+        <h1>Stock Levels</h1>
+        <button class="admin-action" data-action="update-stock">Update Stock</button>
+    </div>
+    <div class="boxes">
+        <h1>Order Management</h1>
+        <button class="admin-action" data-action="view-orders">View Orders</button>
+    </div>
+    <div class="boxes">
+        <h1>Producer Info</h1>
+        <button class="admin-action" data-action="edit-producers">Edit Producer Details</button>
+    </div>
+    <div class="boxes">
+        <h1>User Management</h1>
+        <button class="admin-action" data-action="create-accounts">Create Admin Accounts</button>
+    </div>
+</div>
+
+    <footer id="main-footer"></footer>
+<script src="script.js"></script>
+</body>
+</html>

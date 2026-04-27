@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login – Greenfield Local Hub</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Greenfield Local Hub - Login</h1>
+
+    <div class="cart" id="cart">
+        🛒 <span id="cart-count">0</span> items (<span id="cart-total">0.00</span>)
+    </div>
+</div>
+
+<nav id="main-nav"></nav>
+
+<!-- CART SIDEBAR -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">✖</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <p>Total: <span id="sidebar-total">0.00</span></p>
+    </div>
+</div>
+
+<div id="cart-overlay"></div>
+
+<!-- LOGIN -->
+<section id="login-section">
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="login-tab">Login</button>
+        <button class="tab-btn" data-tab="register-tab">Register</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="login-tab" class="tab-content active">
+        <h2>Login</h2>
+
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="register-tab" class="tab-content">
+        <h2>Register</h2>
+
+        <form id="register-form">
+            <input type="text" id="reg-name" placeholder="Name" required>
+            <input type="email" id="reg-email" placeholder="Email" required>
+            <input type="password" id="reg-password" placeholder="Password" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <h4>For Admins, please Contact GLH to arrange an account creation</h4>
+        <br>        
+        <h4><a href="contact.html"> Please click for our contact details</a></h4>
+
+    </div>
+
+</section>
+
+<footer id="main-footer"></footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

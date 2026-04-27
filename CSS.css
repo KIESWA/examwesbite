@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Assets/pexels-valentin-ivantsov-2154772556-36091328.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: green;
+    transition: all 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-bottom: 2px solid green;
+}
+
+.header h1 {
+    color: green;
+    font-size: 2em;
+}
+
+.cart {
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+}
+
+
+nav {
+    background-color: green;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: lightgreen;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.boxes {
+    width: 28%;
+    min-width: 250px;
+    padding: 15px;
+    border: 2px dashed greenyellow;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+}
+
+.boxes h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.boxes h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.boxes h4,
+.boxes p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+button.add-to-cart,
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button.add-to-cart:hover,
+button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 360px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-left: 3px solid green;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+/
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid green;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-header h2 {
+    color: green;
+}
+
+
+#close-cart {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: green;
+}
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.cart-item {
+    border: 1px solid lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: white;
+}
+
+
+.cart-item button {
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 5px 8px;
+    font-size: 0.9em;
+}
+
+
+.cart-footer {
+    border-top: 2px solid green;
+    padding-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1500;
+}
+
+#cart-overlay.show {
+    display: block;
+}
+/
+
+#cart-message {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.info-text {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+
+footer {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid green;
+}
+/
+footer a {
+    color: green;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    background: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+#accessibility-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#accessibility-panel {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: white;
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#accessibility-panel button {
+    display: block;
+    margin: 5px 0;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 12px;
+    background-color: rgba(240,255,240,0.9);
+}
+
+#login-section h2 {
+    color: green;
+    text-align: center;
+}
+
+/
+#login-section h4 {
+    text-align: center;
+}
+
+#login-section h4 a {
+    color: green;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#login-section h4 a:hover {
+    color: white;
+    background: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid green;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: white;
+    color: green;
+}
+
+.tabs button.active {
+    background-color: green;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 20px 10px;
+}
+
+.footer-brand h3 {
+    margin-bottom: 5px;
+    color: green;
+}
+
+.footer-brand p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.footer-links,
+.footer-social {
+    margin: 10px 0;
+}
+
+.footer-links a,
+.footer-social a {
+    color: green;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-copy {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #444;
+}
+
+.page-content {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border: 2px solid green;
+    border-radius: 10px;
+    color: green;
+}
+
+.page-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.page-content h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: darkgreen;
+}
+
+.page-content p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+/

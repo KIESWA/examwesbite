@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home – Greenfield Local Hub</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Greenfield Local Hub</h1>
+
+        <div class="cart" id="cart">
+            🛒 <span id="cart-count">0</span> items (<span id="cart-total">0.00</span>)
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="main-nav"></nav>
+
+    <!-- CART SIDEBAR -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart">✖</button>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+            <p>Total: <span id="sidebar-total">0.00</span></p>
+        </div>
+    </div>
+
+    <div id="cart-overlay"></div>
+
+    <!-- CONTENT -->
+    <h2 class="info-text">Welcome to Greenfield Local Hub</h2>
+
+    <p class="info-text">
+        Connecting local farmers and producers with the community.
+    </p>
+
+    <h3 class="info-text">Featured Produce</h3>
+
+    <div class="container">
+        <div class="boxes" data-name="Eggs" data-price="4">
+            <h1>Eggs</h1>
+            <h3>Helen's Farm</h3>
+            <h1>£4</h1>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="boxes" data-name="Carrots" data-price="1.5">
+            <h1>Carrots</h1>
+            <h3>Liam's Farm</h3>
+            <h1>£1.50</h1>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="boxes" data-name="Milk" data-price="1.5">
+            <h1>Milk</h1>
+            <h3>John's Farm</h3>
+            <h1>£1.50</h1>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- FOOTER (JS GENERATED) -->
+    <footer id="main-footer"></footer>
+
+    <!-- ACCESSIBILITY -->
+    <button id="accessibility-btn">⚙️</button>
+
+    <div id="accessibility-panel">
+        <button id="increase-font">Increase Font</button>
+        <button id="decrease-font">Decrease Font</button>
+        <button id="change-font">Change Font</button>
+        <button id="change-color">Change Text Color</button>
+        <button id="change-contrast">Change Contrast</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

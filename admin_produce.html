@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Produce – Greenfield Local Hub</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div class="header">
+    <h1>Greenfield Local Hub - Admin Produce</h1>
+</div>
+
+<nav id="admin-produce-nav">
+    <a href="home.html">Home</a>
+    <a href="produce.html">Manage Produce</a>
+    <a href="login.html" id="logout-link">Logout</a>
+</nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">✖</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <p>Total: <span id="sidebar-total">0.00</span></p>
+    </div>
+</div>
+
+<h3 class="info-text">Admin Produce Dashboard</h3>
+<p class="info-text">Manage stock levels and produce details.</p>
+
+<div class="container">
+    <div class="boxes">
+        <h1>Stock Management</h1>
+        <button id="update-stock-btn">Update Stock</button>
+    </div>
+    <div class="boxes">
+        <h1>New Produce</h1>
+        <button id="add-item-btn">Add Item</button>
+    </div>
+    <div class="boxes">
+        <h1>Edit Produce</h1>
+        <button id="edit-items-btn">Edit Items</button>
+    </div>
+</div>
+
+<footer id="main-footer"></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
